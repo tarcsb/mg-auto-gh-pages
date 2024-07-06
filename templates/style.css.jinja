@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('images/image1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    scroll-behavior: smooth;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-color: rgba(168, 218, 220, 0.9);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #f4a261;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 60px 20px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.services-list li {
+    margin: 10px 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    text-align: center;
+}
+
+.mySlides img {
+    vertical-align: middle;
+    width: 48%;
+    margin: 1%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(168, 218, 220, 0.9);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}

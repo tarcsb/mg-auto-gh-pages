@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ company_name }}</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>{{ company_name }}</h1>
+        <p>{{ company_slogan }}</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to {{ company_name }}! We are dedicated to providing the best services to our clients. Our passion for excellence and commitment to customer satisfaction set us apart from the competition.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+        {% for service in services.split(',') %}
+            <li>{{ service }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section id="slideshow">
+        <h2>Our Work</h2>
+        <div class="slideshow-container">
+            {% for i in range(0, (images | length), 2) %}
+                <div class="mySlides fade">
+                    <div class="image-container">
+                        {% if images[i] %}
+                            <img src="images/{{ images[i] }}" style="width:100%">
+                        {% endif %}
+                        {% if images[i+1] %}
+                            <img src="images/{{ images[i+1] }}" style="width:100%">
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to request a quote, please reach out to us. We're here to help and look forward to working with you!</p>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:{{ contact_email }}">{{ contact_email }}</a></p>
+            <p>Phone: <a href="tel:{{ contact_phone }}">{{ contact_phone }}</a></p>
+            <p>Address: {{ contact_address }}</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 {{ company_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>

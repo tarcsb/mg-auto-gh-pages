@@ -1,0 +1,19 @@
+{
+  "name": "{{ repo_name }}",
+  "version": "1.0.0",
+  "description": "Setup for GitHub Pages site",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=8080",
+    "build": "echo 'No build step necessary'",
+    "deploy": "gh-pages -d .",
+    "watch": "watch 'python3 rerender_templates.py' templates/ images/ config.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "live-server": "^1.2.1",
+    "watch": "^1.0.2"
+  }
+}

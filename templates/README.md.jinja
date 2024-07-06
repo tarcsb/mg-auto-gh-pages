@@ -1,0 +1,43 @@
+# {{ repo_name }}
+
+## {{ company_name }}
+
+{{ company_slogan }}
+
+## About
+
+This project is a static site for {{ company_name }}, created to showcase services and provide contact information.
+
+## How to run locally
+
+1. Clone the repository:
+    ```sh
+    git clone git@github.com:{{ github_username }}/{{ repo_name }}.git
+    cd {{ repo_name }}
+    ```
+
+2. Install dependencies:
+    ```sh
+    npm install
+    ```
+
+3. Start the development server:
+    ```sh
+    npm start
+    ```
+
+4. Open your browser and go to `http://localhost:8080`.
+
+## Deploying to GitHub Pages
+
+1. Build the project:
+    ```sh
+    npm run build
+    ```
+
+2. Deploy to GitHub Pages:
+    ```sh
+    npm run deploy
+    ```
+
+Your site will be available at: `https://{{ github_username }}.github.io/{{ repo_name }}`
